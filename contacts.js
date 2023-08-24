@@ -41,16 +41,16 @@ async function addContact(name, email, phone) {
   try {
     const allContacts = await listContacts();
 
-    const newContact = {
+    const contactObj = {
       id: nanoid(),
       name: name,
       email: email,
       phone: phone,
     };
 
-    const newContacts = allContacts.push(newContact);
-
-    await fs.appendFile(contactsPath, JSON.stringify(newContacts, null, 2));
+    allContacts.push(contactObj);
+    await fs.appendFile(contactsPath, JSON.stringify(allContacts, null, 2));
+    return contactObj;
   } catch (error) {
     throw new Error("Error adding contact");
   }
