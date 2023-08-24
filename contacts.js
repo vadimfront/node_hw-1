@@ -49,7 +49,7 @@ async function addContact(name, email, phone) {
     };
 
     allContacts.push(contactObj);
-    await fs.appendFile(contactsPath, JSON.stringify(allContacts, null, 2));
+    await fs.writeFile(contactsPath, JSON.stringify(allContacts, null, 2));
     return contactObj;
   } catch (error) {
     throw new Error("Error adding contact");
