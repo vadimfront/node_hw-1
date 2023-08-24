@@ -1,0 +1,28 @@
+{
+  "name": "node_hw-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node contacts",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadimfront/node_hw-1.git"
+  },
+  "author": "Vadim Kofman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vadimfront/node_hw-1/issues"
+  },
+  "homepage": "https://github.com/vadimfront/node_hw-1#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "nanoid": "^3.3.6"
+  }
+}
